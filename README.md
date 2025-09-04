@@ -74,6 +74,8 @@ Rode `npm run start-graphql` para executar a API do GraphQL e acesse a URL http:
 
 ## Como executar Testes
 - Caso apresente erro ao utilizar comando npm run test-controller ou npm run test-external, utilizar o comando: npx mocha Deve realizar o comando dentro da pasta onde está localizado o arquivo .test.js.
+- Incluido script no arquivo package para startar as API's Rest e Graphql ao mesmo tempo.
+- Incluido script no arquivo package para rodar todos os testes ao mesmo tempo.
 
 ---
 
