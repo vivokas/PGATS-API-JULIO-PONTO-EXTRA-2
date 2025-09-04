@@ -1,0 +1,12 @@
+{
+    "user": {
+        "username": "julio",
+        "password": "123456"
+    },
+
+    "transfer": {
+        "from": "julio",
+        "to": "priscila",
+        "value": 200
+    }
+}

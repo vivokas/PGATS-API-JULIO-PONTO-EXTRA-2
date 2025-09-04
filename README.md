@@ -72,6 +72,9 @@ Rode `npm run start-graphql` para executar a API do GraphQL e acesse a URL http:
 - O arquivo `app.js` pode ser importado em ferramentas de teste como Supertest.
 - Para testar a API GraphQL, importe `graphql/app.js` nos testes.
 
+## Como executar Testes
+- Caso apresente erro ao utilizar comando npm run test-controller ou npm run test-external, utilizar o comando: npx mocha Deve realizar o comando dentro da pasta onde está localizado o arquivo .test.js.
+
 ---
 
 Para dúvidas, consulte a documentação Swagger, GraphQL Playground ou o código-fonte.

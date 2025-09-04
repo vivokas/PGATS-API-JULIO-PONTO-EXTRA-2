@@ -7,7 +7,7 @@ module.exports = {
   Query: {
     users: () => userService.listUsers(),
     transfers: (parent, args, context) => {
-      if (!context.user) throw new Error('Autenticação obrigatória');
+      if (!context.user) throw new Error('A Autenticação é obrigatória');
       return transferService.listTransfers();
     },
   },
@@ -21,7 +21,7 @@ module.exports = {
       return { token, user };
     },
     createTransfer: (parent, { from, to, value }, context) => {
-      if (!context.user) throw new Error('Autenticação obrigatória');
+      if (!context.user) throw new Error('A Autenticação é obrigatória');
       return transferService.transfer({ from, to, value });
     },
   },

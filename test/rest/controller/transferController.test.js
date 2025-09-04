@@ -4,10 +4,10 @@ const sinon = require('sinon');
 const { expect } = require('chai');
 
 // Aplicação
-const app = require('../../app');
+const app = require('../../../app'); //alterado caminho devido a criação de pastas para teste graphql
 
 // Mock
-const transferService = require('../../service/transferService');
+const transferService = require('../../../service/transferService'); //alterado caminho devido a criação de pastas para teste graphql
 
 // Testes
 describe('Transfer Controller', () => {

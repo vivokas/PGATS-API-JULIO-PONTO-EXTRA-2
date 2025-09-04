@@ -33,3 +33,6 @@ jobs:
 
     - name: Rodar os testes de API via HTTP
       run: npm run test-external
+
+    - name: Rodar os testes de API GRAPHQL
+      run: npm run test-external-graphql
