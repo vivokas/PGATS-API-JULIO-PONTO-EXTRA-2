@@ -34,5 +34,11 @@ jobs:
     - name: Rodar os testes de API via HTTP
       run: npm run test-external
 
+    - name: Subir a API GRAPHQL
+      run: npm run start-graphql &
+
+    - name: Esperar a API GRAPHQL estar Funcionando
+      run: sleep 8
+
     - name: Rodar os testes de API GRAPHQL
       run: npm run test-external-graphql
