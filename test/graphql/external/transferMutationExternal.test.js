@@ -2,7 +2,6 @@ const chai = require('chai');
 const expect = chai.expect;
 const request = require('supertest');
 const data = require('../fixture/transferMutation.json');
-const deets = require('../../../middleware/authenticateToken');
 const baseUrl = 'http://localhost:4000/graphql';
 
 describe('Mutation Transfer - External', function () {
@@ -26,7 +25,7 @@ describe('Mutation Transfer - External', function () {
     token = respostaLogin.body.data.loginUser.token;
   });
 
-  // Função helper para criar transferência
+
   async function criarTransferencia(transfer, token) {
     const req = request(baseUrl).post('');
     if (token) req.set('Authorization', `Bearer ${token}`);
@@ -49,7 +48,7 @@ describe('Mutation Transfer - External', function () {
 
     expect(resposta.status).to.equal(200);
 
-    // Compara apenas as propriedades relevantes, ignorando a data
+
     expect(resposta.body.data.createTransfer).to.include({
       from: data.transfer.from,
       to: data.transfer.to,

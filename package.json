@@ -8,8 +8,10 @@
     "test-external": "mocha \"test/rest/external/**/*.test.js\" --timeout 10000 --reporter mochawesome",
     "test-controller": "mocha \"test/rest/controller/**/*.test.js\" --timeout 10000 --reporter mochawesome",
     "test-external-graphql": "mocha \"test/graphql/external/**/*.test.js\" --timeout 10000 --reporter mochawesome",
-    "start": "node server.js",
-    "start-graphql": "node graphql/server.js"
+    "test-all": "mocha \"test/rest/external/**/*.test.js\" \"test/rest/controller/**/*.test.js\" \"test/graphql/external/**/*.test.js\" --timeout 10000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=mochawesome",
+  "start": "node server.js",
+  "start-graphql": "node graphql/server.js",
+  "start-all": "concurrently \"npm run start\" \"npm run start-graphql\""
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,7 @@
   "dependencies": {
     "apollo-server-express": "^3.13.0",
     "bcryptjs": "^3.0.2",
+    "concurrently": "^9.2.1",
     "dotenv": "^17.2.1",
     "express": "^4.17.1",
     "graphql": "^16.11.0",
