@@ -42,3 +42,6 @@ jobs:
 
     - name: Rodar os testes de API GRAPHQL
       run: npm run test-external-graphql
+
+    - name: Rodar todos os testes API HTTP e GRAPHQL
+      run: npm run test-all
